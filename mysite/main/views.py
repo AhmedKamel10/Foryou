@@ -62,7 +62,7 @@ def create(response):
         space.clear()
         txt = response.POST.get('new1')
         q = txt
-        responses = client.search_spaces(query=q, max_results=10)
+        responses = client.search_spaces(query=q, max_results=50)
         for i in responses.data:
             id = i.id
             spaces = client.get_space(id=id, expansions='host_ids')
